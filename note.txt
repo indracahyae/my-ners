@@ -1,0 +1,28 @@
+Need :
+core ui              > NativeBase & ant design
+router          > reactNavigation.org
+manage state    > redux
+validator       > validator.js
+http request    > axios
+react-native-splash-screen
+
+setting:
+Navigation app  /ok
+//YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', ]);
+    Screens :
+    Login (fb,twitter,google) > login form > syarat & ketentuan 
+        Pesanan (list jobs/pesanan 2 opsi(dalam proses, slesai), create job/ pesanan)
+            Form Data Pesanan > form data anggota > List perawat yang tersedia (list, cari, ada filter) > resume pesanan (tambah perawat,rating & komentar ke perawat) 
+                                                        Hire perawat                                        komentar Perawat (list komentar & beri komentar)
+                                                        Detail perawat
+        Saldo
+        Info
+            kbijakan privasi
+            Q&A
+            kritik & saran
+        Akun Saya
+            My Account
+            form Tambah Anggota
+            logout
+
+UI  /disini
