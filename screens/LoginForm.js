@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import {View,Text,Image} from 'react-native';
+import {View,Text,Image,Keyboard,Dimensions} from 'react-native';
 import {Container, Header, Left, Body, Right, Button, Icon, Title,Content,Form,Item,Label,Input, Footer} from 'native-base';
 import Modal from 'antd-mobile/lib/modal';
 
 const Alert = Modal.alert;
+const screen = Dimensions.get('screen');
 
 export default class App extends Component {
 
     cekAkun = () => {
         // this.props.navigation.navigate('FormNoTlp');
         // alert('coba')
+        Keyboard.dismiss();
         Alert('Login', 'checking ..', [
             { text: 'Cancel', onPress: () => console.log('cancel') },
             { text: 'Ok', onPress: () => this.props.navigation.navigate('FormNoTlp') },
@@ -19,12 +21,12 @@ export default class App extends Component {
     render() {
         return(
             <Container>
-                <Header iosBarStyle='light-content' style={{backgroundColor:'#2d4262'}}>
+                <Header iosBarStyle='dark-content' style={{backgroundColor:'#f1f1f2',borderBottomColor:'#2d4262'}}>
                     <Left>
                         <Button transparent
                             onPress={()=>this.props.navigation.goBack()}
                         >
-                            <Icon name='arrow-back' style={{color: '#D09683'}}/>
+                            <Icon name='arrow-back' style={{color: '#2d4262'}}/>
                         </Button>
                     </Left>
                     <Body>
@@ -33,8 +35,7 @@ export default class App extends Component {
                     <Right>
                         <Button transparent
                             onPress={()=>this.cekAkun()}>
-                            <Text style={{marginRight:5,color:'#f1f1f2',fontSize:18}}>Login</Text>
-                            <Icon name='arrow-forward' style={{color: '#D09683'}}/>
+                            <Icon name='arrow-forward' style={{color: '#2d4262'}}/>
                         </Button>
                     </Right>
                 </Header>
@@ -43,13 +44,16 @@ export default class App extends Component {
                         <Form>
                             <Item floatingLabel>
                                 <Label>Email Anda</Label>
-                                <Input />
+                                <Input keyboardType='email-address' autoFocus={true}/>
                             </Item>
                             
                         </Form>
                     </View>
                 </Content>
-
+                <View 
+                    style={{backgroundColor:'rgba(45, 66, 98, 1)',width:screen.width,height:30,alignItems:'center'}}>
+                    <Text style={{color:'#fff',fontSize:20}}> Login</Text>
+                </View>
             </Container>
         );
     }

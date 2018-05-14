@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {View,Text,StatusBar,ImageBackground,Dimensions,Image} from 'react-native';
-import {Button,Content} from 'native-base';
+import {Button,Content,Icon} from 'native-base';
 
 const screen = Dimensions.get('screen');
 
@@ -16,24 +16,28 @@ export default class App extends Component {
                         <StatusBar barStyle="dark-content" />
                     </View>
                     <Content>
-                        <View style={{alignItems:'center',width:200}}>
+                        <View style={{alignItems:'center',width:220}}>
                             <Image source={require('../assets/logo.png')} style={{marginTop:80,width:130,height:110}}/>
                             <View style={{marginTop:40}}>
-                                <Button block light 
-                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20}}> 
+                                <Button block light iconLeft
+                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20,borderRadius:0,width:219,alignContent:'flex-start',alignItems:'center',alignSelf:'flex-start',justifyContent:'flex-start'}}> 
+                                    <Icon name='facebook' style={{color: '#2d4262',marginRight:7,marginLeft:3}} type='FontAwesome' />
                                     <Text>Continue using Facebook</Text> 
                                 </Button>
-                                <Button block light 
-                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20}}> 
+                                <Button block light iconLeft
+                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20,borderRadius:0,width:219,alignContent:'flex-start',alignItems:'center',alignSelf:'flex-start',justifyContent:'flex-start'}}>
+                                    <Icon name='twitter' style={{color: '#2d4262',marginRight:7,marginLeft:3}} type='FontAwesome'/> 
                                     <Text>Continue using Twitter</Text> 
                                 </Button>
-                                <Button block light 
-                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20}}> 
+                                <Button block light iconLeft
+                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20,borderRadius:0,width:219,alignContent:'flex-start',alignItems:'center',alignSelf:'flex-start',justifyContent:'flex-start'}}>
+                                    <Icon name='google' style={{color: '#2d4262',marginRight:7,marginLeft:3}} type='FontAwesome'/> 
                                     <Text>Continue using Google</Text> 
                                 </Button>
-                                <Button block light 
-                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20}}
+                                <Button block light iconLeft
+                                    style={{paddingLeft:10,paddingRight:10,marginBottom:20,borderRadius:0,width:219,alignContent:'flex-start',alignItems:'center',alignSelf:'flex-start',justifyContent:'flex-start'}}
                                     onPress={()=>this.props.navigation.navigate('LoginForm')}> 
+                                    <Icon name='envelope' style={{color: '#2d4262',marginRight:7,marginLeft:3}} type='FontAwesome'/>
                                     <Text>Continue using Email</Text> 
                                 </Button>
                             </View>

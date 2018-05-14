@@ -74,7 +74,10 @@ const TabNav = createBottomTabNavigator(
     }),
     tabBarOptions:{
         showLabel: false,
-        activeTintColor: '#2d4262'
+        activeTintColor: '#2d4262',
+        style:{
+            borderTopColor:'#2d4262'
+        }
     },
     tabBarPosition: 'bottom',
     animationEnabled: false,
