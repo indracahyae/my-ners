@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import {View,Text,Image} from 'react-native';
-import {Container, Header, Left, Body, Right, Button, Icon, Title,Content} from 'native-base';
+import {Container,Header,Left,Body,Right,Button,
+    Icon,Title,Content,List,ListItem} from 'native-base';
+import Modal from 'antd-mobile/lib/modal';
+
+const operation = Modal.operation;
 
 export default class App extends Component {
+
+    filterRiwayatPesanan = () => {
+        operation([
+            { text: 'Dalam Proses', onPress: () => console.log('1') },
+            { text: 'Selesai', onPress: () => console.log('2') },
+          ])
+    }
+
     render() {
         return(
             <Container>
@@ -13,13 +25,24 @@ export default class App extends Component {
                             <Text style={{color:'#000',fontSize:20,marginLeft:7}}> Pesanan </Text>
                         </View>
                     </Left>
+                    <Right>
+                        <Icon name='add' style={{color: '#2d4262'}} type="MaterialIcons"
+                            onPress={()=>{}}/>
+                    </Right>
                 </Header>
                 <Content style={{backgroundColor:'#f1f1f2', padding:10}} >
-                    <View>
-                        <Text>
-                            Pesanan
-                        </Text>
-                    </View>
+                    <List>
+                        <ListItem itemDivider style={{backgroundColor:'#e4e4e6'}} icon>
+                            <Body><Text>Riwayat Pesanan</Text></Body>
+                            <Right>
+                                <Text style={{fontSize:13}}>Dalam Proses</Text>
+                                <Icon name="options" style={{color: '#2d4262'}} onPress={()=>this.filterRiwayatPesanan()}/>
+                            </Right>
+                        </ListItem>
+                        <ListItem>
+                            <Text>xxxxx</Text>
+                        </ListItem>
+                    </List>
                 </Content>
             </Container>
         );

@@ -16,6 +16,8 @@ Navigation app  /ok
                                                         Hire perawat                                        komentar Perawat (list komentar & beri komentar)
                                                         Detail perawat
         Saldo
+            tambah deposit
+            riwayat
         Info
             kbijakan privasi
             Q&A
@@ -25,4 +27,17 @@ Navigation app  /ok
             form Tambah Anggota
             logout
 
-UI  - ui main tab /disini
+UI      /ok
+
+Sync Data   /disini
+Login auth  /disini
+    * facebook
+    id klien goole > 357945325336-dd173cke67majne2tl143l3vhgadv734.apps.googleusercontent.com 
+    * twitter
+    * google
+    * email manual
+#ref
+https://firebase.googleblog.com/2016/07/firebase-react-native.html
+https://firebase.googleblog.com/2016/01/the-beginners-guide-to-react-native-and_84.html
+Verivikasi akun dengan NoTlp
+MAIN app

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {View,Text,Image} from 'react-native';
-import {Container, Header, Left, Body, Right, Button, Icon, Title,Content} from 'native-base';
+import {Container, Header, Left, Body, Right, Button, Icon, Title,Content,List,ListItem} from 'native-base';
 
 export default class App extends Component {
     render() {
@@ -13,13 +13,20 @@ export default class App extends Component {
                             <Text style={{color:'#000',fontSize:20,marginLeft:7}}> Saldo </Text>
                         </View>
                     </Left>
+                    <Right>
+                        <Icon name='add' style={{color: '#2d4262'}} type="MaterialIcons"
+                            onPress={()=>{}}/>
+                    </Right>
                 </Header>
                 <Content style={{backgroundColor:'#f1f1f2', padding:10}}>
-                    <View>
-                        <Text>
-                            Saldo
-                        </Text>
-                    </View>
+                    <List>
+                        <ListItem itemDivider style={{backgroundColor:'#e4e4e6'}}>
+                            <Body><Text>Riwayat Deposit</Text></Body>
+                        </ListItem>
+                        <ListItem>
+                            <Text>xxxxx</Text>
+                        </ListItem>
+                    </List>
                 </Content>
             </Container>
         );

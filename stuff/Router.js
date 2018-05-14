@@ -68,7 +68,7 @@ const TabNav = createBottomTabNavigator(
                 iconName = `person${focused ? '' : '-outline'}`;
                 return <MaIcons name={iconName} size={27} color={tintColor} />;
             }
-            // You can return any component that you like here! We usually use an
+            // You can return any component that you like here! We usually use an  
             return <Ionicons name={iconName} size={27} color={tintColor} />;
         },
     }),

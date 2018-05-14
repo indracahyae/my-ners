@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {View,Text,Image} from 'react-native';
-import {Container, Header, Left, Body, Right, Button, Icon, Title,Content} from 'native-base';
+import {Container, Header, Left, Body, Right, Button, Icon, 
+        Title,Content,List,ListItem, Toast} from 'native-base';
 
 export default class App extends Component {
     render() {
@@ -15,11 +16,28 @@ export default class App extends Component {
                     </Left>
                 </Header>
                 <Content style={{backgroundColor:'#f1f1f2', padding:10}}>
-                    <View>
-                        <Text>
-                            Bantuan
-                        </Text>
-                    </View>
+                    <List>
+                        <ListItem onPress={()=> Toast.show({
+                                                text: 'pressed',
+                                            })}>
+                            <Body><Text>Kebijakan Privasi</Text></Body>
+                            <Right>
+                                <Icon name="arrow-forward" style={{color:'#2d4262'}}/>
+                            </Right>
+                        </ListItem>
+                        <ListItem>
+                            <Body><Text>Pertanyaan sering ditanyakan</Text></Body>
+                            <Right>
+                                <Icon name="arrow-forward" style={{color:'#2d4262'}}/>
+                            </Right>
+                        </ListItem>
+                        <ListItem>
+                            <Body><Text>Kritik & Saran</Text></Body>
+                            <Right>
+                                <Icon name="arrow-forward" style={{color:'#2d4262'}}/>
+                            </Right>
+                        </ListItem>
+                    </List>
                 </Content>
             </Container>
         );
