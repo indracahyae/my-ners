@@ -35,8 +35,13 @@ Login auth  /
     * twitter
     * google
     * email manual
-#ref
 https://firebase.googleblog.com/2016/07/firebase-react-native.html
 https://firebase.googleblog.com/2016/01/the-beginners-guide-to-react-native-and_84.html
+Login Email     /disini
+    cek login (sudah terdaftar?)
+    api:
+    cek mail > https://ark.my-ners.com:15443/api/public_html/registerPengguna/cekEmail/?email=almikur GET
+    login > https://ark.my-ners.com:15443/api/public_html/login     FORM DATA
+    register > https://ark.my-ners.com:15443/api/public_html/registerPengguna/CreatePengguna/   FORM DATA
 Verivikasi akun dengan NoTlp    /ok
 MAIN app
