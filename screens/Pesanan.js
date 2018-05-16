@@ -33,10 +33,10 @@ export default class App extends Component {
                 <Content style={{backgroundColor:'#f1f1f2', padding:10}} >
                     <List>
                         <ListItem itemDivider style={{backgroundColor:'#e4e4e6'}} icon>
-                            <Body><Text>Riwayat Pesanan</Text></Body>
-                            <Right>
-                                <Text style={{fontSize:13}}>Dalam Proses</Text>
-                                <Icon name="options" style={{color: '#2d4262'}} onPress={()=>this.filterRiwayatPesanan()}/>
+                            <Body style={{borderBottomWidth:null}}><Text>Riwayat Pesanan</Text></Body>
+                            <Right style={{borderBottomWidth:null}}>
+                                <Text>Dalam Proses</Text>
+                                <Icon name="filter-list" type="MaterialIcons" style={{color: '#2d4262'}} onPress={()=>this.filterRiwayatPesanan()}/>
                             </Right>
                         </ListItem>
                         <ListItem>

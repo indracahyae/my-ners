@@ -143,7 +143,7 @@ export default class App extends Component {
                     </View>
                 </Content>
                 <View 
-                    style={{backgroundColor:'rgba(45, 66, 98, 1)',width:screen.width,height:30,alignItems:'center'}}>
+                    style={{backgroundColor:'rgba(45, 66, 98, 1)',width:screen.width,height:45,alignItems:'center',flexDirection:'row',justifyContent:'center'}}>
                     <Text style={{color:'#fff',fontSize:20}}>Validasi Akun</Text>
                 </View>
             </Container>

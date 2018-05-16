@@ -24,7 +24,7 @@ export default class App extends Component {
                     <ListItem itemDivider style={{backgroundColor:'#e4e4e6'}}>
                         <Body><Text>Profil</Text></Body>
                         <Right>
-                            <Icon name="pencil" style={{color: '#2d4262'}} type='FontAwesome'
+                            <Icon name="edit" style={{color: '#2d4262'}} type='MaterialIcons'
                                     onPress={()=>Toast.show({
                                             text: 'pressed',
                                         })}/>
@@ -37,13 +37,12 @@ export default class App extends Component {
                             <Text note>indracahyae@gmail.com</Text>
                             <Text note>+6281335630404</Text>
                         </Body>
-                        
                     </ListItem>
                     <View>
                         <ListItem itemDivider style={{backgroundColor:'#e4e4e6'}}>
                             <Body><Text>Daftar Anggota</Text></Body>
                             <Right>
-                                <Icon name="add" style={{color: '#2d4262',fontSize:30}}/>
+                                <Icon name="add" style={{color: '#2d4262'}} type="MaterialIcons"/>
                             </Right>
                         </ListItem>
                         <ListItem>

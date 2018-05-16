@@ -7,7 +7,7 @@ export default class App extends Component {
     konfirm =()=>{
         Alert.alert(
             '',
-            'Dengan menutup dialog ini, saya telah membaca dan mematuhi syarat dan ketentuan yang berlaku',
+            'Saya telah membaca dan mematuhi syarat dan ketentuan yang berlaku',
             [
               {text: 'Cancel', onPress: () => console.log('Cancel Pressed')},
               {text: 'Setuju', onPress: () => this.props.navigation.navigate('Dashboard')},
@@ -28,8 +28,7 @@ export default class App extends Component {
                     </Button>
                 </Left>
                 <Body>
-                    <Image source={require('../assets/ic_launcher.png')} style={{width:32,height:32}}/>
-                    <Subtitle style={{color:'#000'}}>Syarat Ketentuan</Subtitle>
+                    <Image source={require('../assets/ic_launcher.png')} style={{width:45,height:45}}/>
                 </Body>
                 <Right>
                     <Button transparent
