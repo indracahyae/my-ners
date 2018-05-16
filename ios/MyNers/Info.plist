@@ -28,7 +28,9 @@
 			<key>CFBundleURLName</key>
 			<string></string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>com.googleusercontent.apps.1036089103821-a1jou7u0i3uu1ip5v7rhon9hohqiq7pl</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

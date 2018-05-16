@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import {View,Text,StatusBar,ImageBackground,Dimensions,Image} from 'react-native';
-import {Button,Content,Icon} from 'native-base';
+import {Button,Content,Icon,Toast} from 'native-base';
+import firebase from 'react-native-firebase';
 
 const screen = Dimensions.get('screen');
 
 export default class App extends Component {
     constructor(){
         super();
+    }
+
+    componentDidMount(){
+        firebase.auth().signInAnonymouslyAndRetrieveData()
+        .then(() => {
+            Toast.show({
+                text: "anonimous login",
+                duration: 2000
+            })}
+        );
     }
 
     render() {
@@ -57,8 +68,3 @@ export default class App extends Component {
         );
     }
 }
-
-{/* <Text 
-    onPress={()=>this.props.navigation.navigate('LoginForm')}>
-    Inside
-</Text> */}

@@ -29,15 +29,14 @@ Navigation app  /ok
 
 UI      /ok
 
-Sync Data   /disini
-Login auth  /disini
+SYNC-DATA
+Login auth  /
     * facebook
-    id klien goole > 357945325336-dd173cke67majne2tl143l3vhgadv734.apps.googleusercontent.com 
     * twitter
     * google
     * email manual
 #ref
 https://firebase.googleblog.com/2016/07/firebase-react-native.html
 https://firebase.googleblog.com/2016/01/the-beginners-guide-to-react-native-and_84.html
-Verivikasi akun dengan NoTlp
+Verivikasi akun dengan NoTlp    /ok
 MAIN app

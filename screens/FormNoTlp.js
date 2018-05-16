@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {View,Text,Image,ScrollView,Dimensions} from 'react-native';
 import {Container,Header,Left,Body,Right,Button,Icon,
-        Title,Content,Form,Item,Label,Input} from 'native-base';
+        Title,Content,Form,Item,Label,Input,Toast} from 'native-base';
 import Modal from 'antd-mobile/lib/modal';
 import List from 'antd-mobile/lib/list';
 import SearchBar from 'antd-mobile/lib/search-bar'
 import {PhoneRegion} from '../stuff/PhoneRegion';
+import firebase from 'react-native-firebase';
 
 const ListItem = List.Item;
 const screen = Dimensions.get('screen');
@@ -17,7 +18,8 @@ export default class App extends Component {
             modalPhoneRegion: false,
             formValidasi : 'none',
             resultPhoneRegion: [],
-            phone:'+62'
+            phone:'+62',
+            codeInput: ''
         }
         this.inputs={};
     }
@@ -57,10 +59,29 @@ export default class App extends Component {
     }
 
     sendVerification = () => {
-        this.setState({
-            formValidasi: 'flex'
-        });
+        firebase.auth().signInWithPhoneNumber(this.state.phone)
+          .then(confirmResult => this.setState({ confirmResult, formValidasi: 'flex' }))
+          .catch(error => this.setState({ message: `Sign In With Phone Number Error: ${error.message}` }));
     }
+
+    confirmCode = () => {
+        const { codeInput, confirmResult } = this.state;
+
+        if (confirmResult && codeInput.length) {
+            confirmResult.confirm(codeInput)
+            .then((user) => {
+                this.props.navigation.navigate('SyaratKetentuan');
+            })
+            .catch(error => {
+                this.setState({ message: `Code Confirm Error: ${error.message}` });
+                Toast.show({
+                    text: "kode tidak sesuai",
+                    duration: 2000
+                });
+            });
+        }
+    };
+    
 
     render() {
         return(
@@ -131,13 +152,17 @@ export default class App extends Component {
                     </View>
                     <View style={{display:this.state.formValidasi, marginTop:20}}>
                         <Text onPress={()=>this.props.navigation.navigate('SyaratKetentuan')}>
-                            Tunggu pesan di Handphone Anda, masukkan kode disini. 
+                            Kode telah dikirim di handphone Anda, masukkan kode disini. 
                         </Text>
                         <Form>
                             <Item>
-                                <Input placeholder='kode verifikasi' keyboardType='numeric'/>
+                                <Input placeholder='kode verifikasi' keyboardType='numeric' value={this.state.codeInput}
+                                    onChangeText={(v)=>{
+                                        this.setState({codeInput:v});
+                                    }}
+                                />
                                 <Icon style={{color:'#636e72'}} 
-                                    active name='arrow-dropright-circle' onPress={()=>this.props.navigation.navigate('SyaratKetentuan')}/>
+                                    active name='arrow-dropright-circle' onPress={()=>this.confirmCode()}/>
                             </Item>
                         </Form>
                     </View>
