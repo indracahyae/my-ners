@@ -45,7 +45,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		646EFD837FD347C98D270F99 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39D9E853D378475CB025ABE0 /* Roboto_medium.ttf */; };
 		7258CDCCEF0D45A3AAF44FB2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6FE065C1B914E4BA16E2F3F /* Foundation.ttf */; };
-		75B1AF5AE759862180C2EEA5 /* Pods_MyNers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3919FDA85C84CA2A50CE7440 /* Pods_MyNers.framework */; };
+		830BA7A65662114FBE3C9E43 /* libPods-MyNers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87BB20ED1C89559B00378FBF /* libPods-MyNers.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B2C7C3C9C97947B29034AD93 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FD9E3EA4DA4D3EBC3D3559 /* Entypo.ttf */; };
@@ -389,7 +389,6 @@
 		2D02E4901E0B4A5D006451C7 /* MyNers-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyNers-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFA940F13A3425F9582ADC0 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		3919FDA85C84CA2A50CE7440 /* Pods_MyNers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D9E853D378475CB025ABE0 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		39FD9E3EA4DA4D3EBC3D3559 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		5D3896D028F84AAAA6B87956 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
@@ -399,6 +398,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		85FBF392EBBF472AA5E286CE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		87BB20ED1C89559B00378FBF /* libPods-MyNers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyNers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F22630E04EF467AA79F984D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		9C7F8BCCBF5C4F2184301E3E /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		9CFD238AE760472CB54187E8 /* SafariServices.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -454,8 +454,8 @@
 				E4605EE30A7F441680BB35E3 /* SafariServices.framework in Frameworks */,
 				F73778CC13244DC3924E4F00 /* SystemConfiguration.framework in Frameworks */,
 				C5F26B77F1CB42AFA6B33E83 /* AddressBook.framework in Frameworks */,
-				75B1AF5AE759862180C2EEA5 /* Pods_MyNers.framework in Frameworks */,
 				30EE6EE9CAE849C2A41FD5FD /* libRNFirebase.a in Frameworks */,
+				830BA7A65662114FBE3C9E43 /* libPods-MyNers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +610,7 @@
 				9CFD238AE760472CB54187E8 /* SafariServices.framework */,
 				B7408215433E4E43B597DE54 /* SystemConfiguration.framework */,
 				B983F05E36894EF3BAE3AB87 /* AddressBook.framework */,
-				3919FDA85C84CA2A50CE7440 /* Pods_MyNers.framework */,
+				87BB20ED1C89559B00378FBF /* libPods-MyNers.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -803,7 +803,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				32499BE73019C9AB9CFA100A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1319,28 +1318,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		32499BE73019C9AB9CFA100A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyNers/Pods-MyNers-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyNers/Pods-MyNers-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		83F67544D8C76A1DE8757A6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
